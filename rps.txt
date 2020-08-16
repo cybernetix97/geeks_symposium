@@ -1,0 +1,33 @@
+#importing random function
+from random import randint
+#creating a list of possibilities
+p=["rock","paper","scissors"]
+#assigning random element of the list to computer
+computer = p[randint(0,2)]
+#set the selected option to a variable
+selopt = False
+
+while selopt == False:
+        selopt = input("rock,paper,scissor?")
+        if selopt == computer:
+            print("it's a TIE")
+        elif selopt == "rock":
+            if computer == "scissor":
+                 print("you lose computer chose:",computer)
+            else:
+                 print("you win computer chose:",computer)
+        elif selopt == "paper":
+            if computer == "rock":
+                 print("you win computer chose:",computer)
+            else:
+                 print("you lose computer chose:",computer)
+        elif selopt == "scissor":
+            if computer == "rock":
+                 print("you lose computer chose:",computer)
+            else:
+                 print("you win computer chose:",computer)
+        else:
+                 print("please enter from these(rock,paper,scissor):")
+#for continuing the loop
+selopt = False
+computer = p[randint(0,2)]
